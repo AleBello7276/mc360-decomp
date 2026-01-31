@@ -2,7 +2,3 @@
 object: orig/584111F7/tu2.xex
 symbols: config/584111F7/symbols.txt
 splits: config/584111F7/splits.txt
-
-jumptables:
-  - address: 0x823e0a4c
-    entries: 22

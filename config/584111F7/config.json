@@ -1,5 +1,7 @@
 {
     "progress_categories": {
+        "game": "MC Code",
+        "libs": "External Libs",
         "sdk": "XDK Code"
     },
     "asflags": [],
@@ -8,7 +10,31 @@
         "base": {
             "flags": [
                 "/nologo",
-                "/c"
+                "/c",
+                "/O2",
+                "/Oi", 
+                "/EHsc",
+                "/Gy",
+                "/GR",
+                "/Zc:wchar_t"
+            ]
+        },
+        "game": {
+            "base": "base",
+            "flags": [
+                
+            ]
+        },
+        "xdk": {
+            "base": "base",
+            "flags": [
+                
+            ]
+        },
+        "libs": {
+            "base": "base",
+            "flags": [
+                
             ]
         }
     }

@@ -1,1 +1,12 @@
-// Intentionally empty. Initial analysis will generate this automatically.
+Sections:
+	.rdata      type:rodata align:65536
+	.pdata      type:rodata align:65536
+	.text       type:code align:65536
+	.data       type:data align:65536
+	.XBMOVIE    type:data align:65536
+	.NSPCH      type:data align:65536
+	.idata      type:data align:65536
+
+4J_Platform/main.cpp:
+	.pdata      start:0x8214FC98 end:0x8214FCB8
+	.text       start:0x8228ADA0 end:0x8228C6B0
