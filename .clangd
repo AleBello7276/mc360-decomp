@@ -2,3 +2,9 @@ Diagnostics:
   Suppress:
     - "reserved-id-macro"
     - "expected_unqualified_id"
+
+CompileFlags:
+  Add:
+    - --driver-mode=cl
+    - -fms-extensions
+    - -fms-compatibility
