@@ -2,7 +2,7 @@
 #include "xdk/D3D9.h"
 #include "xdk/XAPILIB.h"
 #include "xdk/d3d9i/d3d9.h"
-#include "xdk/win_types.h"
+#include <types.h>
 #include "d3dx9math.h"
 #include "d3dx9mesh.h"
 

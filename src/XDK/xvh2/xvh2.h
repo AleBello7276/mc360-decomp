@@ -1,5 +1,5 @@
 #pragma once
-#include "xdk/win_types.h"
+#include <types.h>
 #include "xdk/xapilibi/xbase.h"
 
 struct IXHV2Engine { /* Size=0x4 */
