@@ -24,30 +24,31 @@
 }*/
 
 
-BOOL isWideScreen = 0;
+static BOOL isWideScreen = 0;
 
 void initD3D(D3DDevice** outDev, D3DPRESENT_PARAMETERS* params) {
     XVIDEO_MODE videoMode;
     memset(params, 0, sizeof(D3DPRESENT_PARAMETERS));
     XGetVideoMode(&videoMode);
-    
+
     params->BackBufferCount = 1;
     params->BackBufferWidth = 1280;
     params->BackBufferHeight = 720;
+    params->BackBufferFormat = D3DFORMAT::D3DFMT_A8R8G8B8;
+    params->EnableAutoDepthStencil = true;
+    params->AutoDepthStencilFormat = D3DFORMAT::D3DFMT_D24S8;
+    params->SwapEffect = D3DSWAPEFFECT::D3DSWAPEFFECT_DISCARD;
+    params->PresentationInterval = 1;
     
     isWideScreen = videoMode.fIsWideScreen;
 
-    params->EnableAutoDepthStencil = true;
-    params->BackBufferFormat = D3DFORMAT::D3DFMT_A8R8G8B8;
-    params->SwapEffect = D3DSWAPEFFECT::D3DSWAPEFFECT_DISCARD;
-    params->PresentationInterval = 1;
-    params->AutoDepthStencilFormat = D3DFORMAT::D3DFMT_D24S8;
-    
-    
-    if(videoMode.fIsWideScreen) {
-        params->Flags = 0;
+    // this is very ugly but i can't get it to match any other way
+    if(!isWideScreen) {
+        params->Flags = true;
+    } else {
+        params->Flags = false;
     }
-   
+
     Direct3D_CreateDevice(0, D3DDEVTYPE::D3DDEVTYPE_HAL, NULL, 1, params, outDev);
 }
 
