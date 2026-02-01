@@ -1,6 +1,7 @@
 #include "client/CMinecraftApp.h"
 
 
+CXboxMinecraftApp CXboxMinecraftApp::sInstance;
 
 //
 // TU2 .text 0x824eb558

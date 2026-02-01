@@ -5,7 +5,8 @@
         "cflags": "base",
         "objects": {
             "4J_Platform/main.cpp": "NonMatching",
-            "Minecraft.Client/client/CMinecraftApp.cpp": "NonMatching"
+            "Minecraft.Client/client/CMinecraftApp.cpp": "NonMatching",
+            "Minecraft.Client/client/CInput.cpp": "NonMatching"
         }
     }
 }

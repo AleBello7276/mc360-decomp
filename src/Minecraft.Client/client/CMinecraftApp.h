@@ -15,7 +15,8 @@
 //}
 
 
-struct CMinecraftApp {
+class CMinecraftApp {
+public:
 	void* pUnk1;
 	HXUIDC m_XDC;
 	BOOL unk3;
@@ -30,7 +31,7 @@ struct CMinecraftApp {
 
 
 	CMinecraftApp();
-	virtual ~CMinecraftApp() {};
+	virtual ~CMinecraftApp();
 	virtual void RegisterXuiClasses() = 0;
 
 	void InitTime();
@@ -38,16 +39,14 @@ struct CMinecraftApp {
 	HRESULT InitialiseXui();
 };
 
-//
-// TU2 rtti 0x829a28c4
-struct CXboxMinecraftApp : public CMinecraftApp
-{
+
+class CXboxMinecraftApp : public CMinecraftApp {
+public:
+	static CXboxMinecraftApp sInstance;		
+	
 	CXboxMinecraftApp();
-	virtual ~CXboxMinecraftApp() { };
+	~CXboxMinecraftApp() {};
 
 	void RegisterXuiClasses() override;
 
 };
-
-// TU2 .data 82a26498
-static CXboxMinecraftApp g_XMcApp;

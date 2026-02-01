@@ -2,9 +2,10 @@ Diagnostics:
   Suppress:
     - "reserved-id-macro"
     - "expected_unqualified_id"
+    - "redefinition_different_typedef"
 
 CompileFlags:
   Add:
-    - --driver-mode=cl
-    - -fms-extensions
-    - -fms-compatibility
+    - "--driver-mode=cl"
+    - "-fms-extensions"
+    - "-fms-compatibility"
