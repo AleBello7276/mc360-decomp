@@ -4,7 +4,8 @@
         "mw_version": "X360/16.00.11886.00",
         "cflags": "base",
         "objects": {
-            "4J_Platform/main.cpp": "NonMatching"
+            "4J_Platform/main.cpp": "NonMatching",
+            "Minecraft.Client/client/CMinecraftApp.cpp": "NonMatching"
         }
     }
 }

@@ -1,5 +1,5 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "minwinbase.h"
 #include "wtypesbase.h"
 

@@ -10,3 +10,10 @@ Sections:
 4J_Platform/main.cpp:
 	.pdata      start:0x8214FC98 end:0x8214FCB8
 	.text       start:0x8228ADA0 end:0x8228C6B0
+	.data       start:0x8299F050 end:0x8299F09C
+
+Minecraft.Client/client/CMinecraftApp.cpp:
+	.pdata      start:0x8214F788 end:0x8214FA10
+	.pdata      start:0x8214FC30 end:0x8214FC38
+	.text       start:0x8227EA28 end:0x8228A7C0
+	.text       start:0x8228A7C0 end:0x8228A840 rename:.text$yc

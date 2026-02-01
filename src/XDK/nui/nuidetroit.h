@@ -1,5 +1,5 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "xdk/XAPILIB.h"
 #include "xdk/D3D9.h"
 #include "vectorintrinsics.h"

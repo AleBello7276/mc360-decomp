@@ -1,5 +1,5 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "minwinbase.h"
 #include "wtypesbase.h"
 
@@ -30,6 +30,10 @@ HANDLE CreateSemaphoreA(
     LPCSTR lpName
 );
 VOID GlobalMemoryStatus(LPMEMORYSTATUS lpBuffer);
+
+BOOL QueryPerformanceCounter(LARGE_INTEGER *lpPerformanceCount);
+
+BOOL QueryPerformanceFrequency(LARGE_INTEGER *lpFrequency);
 
 #ifdef __cplusplus
 }

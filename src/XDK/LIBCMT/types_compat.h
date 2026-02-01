@@ -6,7 +6,7 @@ typedef unsigned int size_t; // or whatever PPC XDK used
 #endif
 
 #ifndef _WCHAR_T_DEFINED
-typedef unsigned short wchar_t; // or whatever PPC XDK used
+using wchar_t = unsigned short; // or whatever PPC XDK used
 #define _WCHAR_T_DEFINED
 #endif
 

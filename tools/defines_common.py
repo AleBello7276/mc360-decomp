@@ -11,7 +11,9 @@ cflags_includes = [
     # I'd put "/I src/system" here
 
     "/I src/ ",
-    "/I src/XDK/ "
-    "/I src/XDK/LIBCMT/ "
-    "/I src/XDK/xapilibi/ "
+    "/I src/Minecraft.client/ ",
+    "/I src/XDK/ ",
+    "/I src/XDK/LIBCMT/ ",
+    "/I src/XDK/xapilibi/ ",
+    "/I src/XDK/xui/ ",
 ]

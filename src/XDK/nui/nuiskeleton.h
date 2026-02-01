@@ -1,5 +1,5 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "vectorintrinsics.h"
 
 #ifdef __cplusplus

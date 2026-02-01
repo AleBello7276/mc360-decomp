@@ -1,5 +1,5 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "xdk/xapilibi/xbase.h"
 #include "xdk/xnet/winsockx.h"
 

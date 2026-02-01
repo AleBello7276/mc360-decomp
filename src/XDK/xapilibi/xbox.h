@@ -1,6 +1,7 @@
 #pragma once
-#include "../win_types.h"
+#include <types.h>
 #include "minwinbase.h"
+#include "winbase.h"
 #include "wtypesbase.h"
 #include "xinput.h"
 #include "xbase.h"

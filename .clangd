@@ -1,0 +1,4 @@
+Diagnostics:
+  Suppress:
+    - "reserved-id-macro"
+    - "expected_unqualified_id"
