@@ -2,7 +2,8 @@
 #include <types.h>
 #include "d3d9/d3d9.h"
 
-struct Renderer {
+class Renderer {
+public:
 	D3DDevice* m_d3dDevice;
 	void* unk1;
 	void* unk2;
@@ -29,11 +30,12 @@ struct Renderer {
 
 
 struct C4JRender {
+public:
     static C4JRender sInstance;
 
+    void Initialise(D3DDevice* d3dDevice);
+private:
 	int something;
     int something2;
 	static Renderer gRenderer;
-
-    void Initialise(D3DDevice* d3dDevice);
 };

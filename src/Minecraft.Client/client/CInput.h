@@ -10,10 +10,8 @@
 class CInput {
 public:
     void SetGameJoypadMaps(int32_t, uint8_t, uint32_t);
-    
-    CInput() {}
 
-    char pad[0x1cc]; 
+    char pad[0x1d0];
     uint32_t** mJoyPadMasks;
 };
 
@@ -22,10 +20,10 @@ public:
 class C_4JInput {
 public:
     static C_4JInput sInstance;    
-
+    
+    void SetGameJoypadMaps(int32_t a, uint8_t b, uint32_t c);
+private:
     int something;
     int something2;
     static CInput mCInp;
-
-    void SetGameJoypadMaps(int32_t a, uint8_t b, uint32_t c);
 };

@@ -20,7 +20,10 @@ Minecraft.Client/client/CMinecraftApp.cpp:
 
 Minecraft.Client/client/CInput.cpp:
 	.pdata      start:0x8215F400 end:0x8215F450
-	.text       start:0x824D7CF8 end:0x824D8E10
+	.text       start:0x824D7E18 end:0x824D8E10
+
+Minecraft.Client/client/C_4JInput.cpp:
+	.text       start:0x824D7CB8 end:0x824D7E18
 	.data       start:0x829B6F08 end:0x829B7DF8 rename:.bss
 
 Render/Renderer.cpp:
