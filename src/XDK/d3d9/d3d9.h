@@ -933,6 +933,30 @@ D3DDevice_CreateQueryTiled(D3DDevice *pDevice, D3DQUERYTYPE Type, UINT TileCapac
 void D3DDevice_SetVertexShader(D3DDevice *pDevice, D3DVertexShader *pShader);
 void D3DDevice_SetPixelShader(D3DDevice *pDevice, D3DPixelShader *pShader);
 
+
+
+
+struct D3DCommandBuffer
+    #if defined(__cplusplus)
+        : public D3DResource
+    #endif
+{
+
+
+    // Flags indicating which registers are inherited from the GPU's current
+    // state when the command buffer is run.  Inheritance is used to pass
+    // run-time parameters such as shader constants to the command buffer.
+    //
+    _D3DTAGCOLLECTION m_Inherited;
+
+    // Flags indicating which registers are to be persisted after the
+    // command buffer is run.
+    //
+    _D3DTAGCOLLECTION m_Persisted;
+};
+
+
+
 #ifdef __cplusplus
 }
 #endif

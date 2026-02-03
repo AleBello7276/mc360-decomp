@@ -8,7 +8,8 @@
             "Minecraft.Client/client/CMinecraftApp.cpp": "NonMatching",
             "Minecraft.Client/client/CInput.cpp": "NonMatching",
             "Minecraft.Client/client/C_4JInput.cpp": "NonMatching",
-            "Render/Renderer.cpp": "NonMatching"
+            "Render/Renderer.cpp": "NonMatching",
+            "Render/C4JRender.cpp": "NonMatching"
         }
     }
 }

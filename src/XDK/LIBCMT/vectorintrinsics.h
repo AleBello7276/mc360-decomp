@@ -75,7 +75,13 @@ typedef struct _XMMATRIX { /* Size=0x40 */
     _XMMATRIX();
     float &operator()(unsigned int, unsigned int);
     float operator()(unsigned int, unsigned int) const;
-    _XMMATRIX &operator=(const _XMMATRIX &);
+    _XMMATRIX &operator=(const _XMMATRIX & mat) {
+        r[0] = mat.r[0];
+        r[1] = mat.r[1];
+        r[2] = mat.r[2];
+        r[3] = mat.r[3];
+        return *this;
+    }
     _XMMATRIX &operator*=(const _XMMATRIX &);
     _XMMATRIX operator*(const _XMMATRIX &) const;
 } XMMATRIX;
@@ -123,8 +129,14 @@ XMVECTOR __vspltw(XMVECTOR vSrcA, unsigned int uImmed);
 // Vector128 Splat Half
 XMVECTOR __vsplth(XMVECTOR vSrcA, unsigned int uImmed);
 
+// Vector128 Splat immediate sign word
+XMVECTOR __vspltisw(int uImmed);
+
 // Vector Permute
 XMVECTOR __vperm(XMVECTOR vSrcA, XMVECTOR vSrcB, XMVECTOR perm);
+
+// Vector Permute word with immediate
+XMVECTOR __vpermwi(XMVECTOR vSrcA, unsigned int imm);
 
 // the list of those VPACK Types and Masks can be found and is referenced from xenia
 // https://github.com/xenia-canary/xenia-canary/blob/canary_experimental/src/xenia/cpu/ppc/ppc_emit_altivec.cc#L2088
@@ -148,6 +160,9 @@ enum VPACK_MASKS {
 XMVECTOR __vpkd3d(
     XMVECTOR vDst, XMVECTOR VRB, VPACK_TYPES type, VPACK_MASKS mask, unsigned int shift
 );
+
+// D3D un-pack
+XMVECTOR __vupkd3d(XMVECTOR VRA, VPACK_TYPES type);
 
 #ifdef __cplusplus
 }

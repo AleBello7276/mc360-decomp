@@ -85,6 +85,12 @@ struct D3DXMATRIX : public _D3DMATRIX { /* Size=0x40 */
     BOOL operator!=(const D3DXMATRIX &) const;
 };
 
+
+__forceinline D3DXMATRIX* MakeIdentity(D3DXMATRIX& outMat) {
+    
+}
+
+
 #ifdef __cplusplus
 }
 #endif

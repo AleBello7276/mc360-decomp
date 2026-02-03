@@ -28,4 +28,7 @@ Minecraft.Client/client/C_4JInput.cpp:
 
 Render/Renderer.cpp:
 	.pdata      start:0x8215F850 end:0x8215F9A0
-	.text       start:0x824E1770 end:0x824E4AD8
+	.text       start:0x824E17E0 end:0x824E4AD8
+
+Render/C4JRender.cpp:
+	.text       start:0x824E16A0 end:0x824E17E0
