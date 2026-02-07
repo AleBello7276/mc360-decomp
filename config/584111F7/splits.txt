@@ -32,3 +32,7 @@ Render/Renderer.cpp:
 
 Render/C4JRender.cpp:
 	.text       start:0x824E16A0 end:0x824E17E0
+
+Minecraft.Client/client/renderer/vertex/Tesselator.cpp:
+	.pdata      start:0x8214CD10 end:0x8214CD68
+	.text       start:0x822376F8 end:0x822387B0
