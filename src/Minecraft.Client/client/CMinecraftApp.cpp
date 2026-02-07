@@ -1,6 +1,5 @@
 #include "client/CMinecraftApp.h"
 
-
 CXboxMinecraftApp CXboxMinecraftApp::sInstance;
 
 //
@@ -9,24 +8,23 @@ CXboxMinecraftApp CXboxMinecraftApp::sInstance;
 // so i'll reimplement based on the usage
 // it is used sometime to print error messages
 //
-void CMinecraftApp::DebugPrintf(char* fmt, ...) 
-{
-	return;
-	//va_list args;
-	//va_start(args, fmt);
-	//vprintf(fmt, args);
-	//va_end(args);
+void CMinecraftApp::DebugPrintf(char* fmt, ...) {
+    return;
+    // va_list args;
+    // va_start(args, fmt);
+    // vprintf(fmt, args);
+    // va_end(args);
 }
 
 //
 // TU2 .text 8228caf8
 //
-//HRESULT CMinecraftApp::InitialiseXui()
+// HRESULT CMinecraftApp::InitialiseXui()
 //{
 //	HRESULT hr;
 //	XUIInitParams xip;
 //
-//	
+//
 //	if (this->isInit)
 //	{
 //		if (this->m_XDC == NULL) {
@@ -48,25 +46,30 @@ void CMinecraftApp::DebugPrintf(char* fmt, ...)
 //	this->unk3 = true;
 //}
 
-
 // TU2 .text 0x8228a7c0
 CMinecraftApp::CMinecraftApp() : pUnk1(nullptr), m_XDC(NULL), isInit(true) {
-	
-	QueryPerformanceFrequency(&this->PerfFreq);
-	QueryPerformanceCounter(&this->PerfCount);
+    QueryPerformanceFrequency(&this->PerfFreq);
+    QueryPerformanceCounter(&this->PerfCount);
+}
+
+// NON_MATCHING -> some fuckery instruction
+void CMinecraftApp::InitTime() {
+    LARGE_INTEGER Freq;
+    QueryPerformanceFrequency(&Freq);
+    mTimeScale = 1.0f / Freq.QuadPart;  // reciprocal of Frequency is Period, seconds per 1 tick
+    QueryPerformanceCounter(&this->PerfCount);
+    unk220 = 0.0f;
+    unk218 = 0;
+    unk224 = 0.0f;
 }
 
 // TU2 .text 8227ea28
 CXboxMinecraftApp::CXboxMinecraftApp() {
-	// TODO:
-
-	
+    // TODO:
 }
 
-
 // TU2 .text 8227ed70
-void CXboxMinecraftApp::RegisterXuiClasses()
-{
-	// TODO:
-	// STUBBBBBBB
+void CXboxMinecraftApp::RegisterXuiClasses() {
+    // TODO:
+    // STUBBBBBBB
 }

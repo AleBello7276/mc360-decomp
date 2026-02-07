@@ -1,11 +1,14 @@
 {
   "[c]": {
     "files.encoding": "utf8",
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnSave": true,
   },
   "[cpp]": {
     "files.encoding": "utf8",
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnSave": true,
+    "C_Cpp.formatting": "clangFormat"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
